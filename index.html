@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain, Your Love Mission Awaits!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            text-align: center;
+            overflow: hidden;
+        }
+        .cockpit {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .dashboard {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #ff3b2f;
+        }
+        .love-note {
+            display: none;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fly-in 2s ease-in-out;
+        }
+        @keyframes fly-in {
+            from {
+                top: -100px;
+                opacity: 0;
+            }
+            to {
+                top: 20%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cockpit">
+        <div class="dashboard">
+            <h2>Captain, Your Love Mission Awaits!</h2>
+            <p>Are you ready for an unforgettable journey?</p>
+            <button class="button" onclick="showLoveNote()">Pre-Flight Check</button>
+        </div>
+        <div class="love-note" id="loveNote">
+            <p>Dear Captain,</p>
+            <p>Our destination is love. Will you be my co-pilot on this journey?</p>
+            <button class="button" onclick="acceptProposal()">Yes, Let's Fly!</button>
+        </div>
+    </div>
+    <script>
+        function showLoveNote() {
+            document.getElementById('loveNote').style.display = 'block';
+        }
+        function acceptProposal() {
+            alert("Fasten your seatbelt, Captain! Our journey begins!");
+        }
+    </script>
+</body>
+</html>
