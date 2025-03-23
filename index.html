@@ -3,90 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Captain, Your Love Mission Awaits!</title>
+    <title>Will You Be My Co-Pilot? 💖</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5dc;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-            text-align: center;
-            overflow: hidden;
         }
-        .cockpit {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+        .container {
+            margin-top: 50px;
         }
-        .dashboard {
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        h1 {
+            color: #ff4500;
+            font-size: 2.5em;
         }
-        .button {
-            background: #ff6f61;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        p {
+            font-size: 1.2em;
+            color: #444;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
             font-size: 18px;
-            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff4500;
+            border-radius: 8px;
             transition: 0.3s;
         }
-        .button:hover {
-            background: #ff3b2f;
+        .btn:hover {
+            background-color: #d43f3f;
         }
-        .love-note {
-            display: none;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            animation: fly-in 2s ease-in-out;
+        .plane {
+            width: 100px;
+            animation: fly 5s linear infinite;
         }
-        @keyframes fly-in {
-            from {
-                top: -100px;
-                opacity: 0;
-            }
-            to {
-                top: 20%;
-                opacity: 1;
-            }
+        @keyframes fly {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(100vw); }
         }
     </style>
 </head>
 <body>
-    <div class="cockpit">
-        <div class="dashboard">
-            <h2>Captain, Your Love Mission Awaits!</h2>
-            <p>Are you ready for an unforgettable journey?</p>
-            <button class="button" onclick="showLoveNote()">Pre-Flight Check</button>
-        </div>
-        <div class="love-note" id="loveNote">
-            <p>Dear Captain,</p>
-            <p>Our destination is love. Will you be my co-pilot on this journey?</p>
-            <button class="button" onclick="acceptProposal()">Yes, Let's Fly!</button>
-        </div>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Plane_icon.svg/512px-Plane_icon.svg.png" class="plane" alt="Flying Plane">
+        <h1>Will You Be My Co-Pilot? ✈️💖</h1>
+        <p>Life is an adventure, and I want to fly through it with you! Ready for this journey?</p>
+        <a href="love-story.html" class="btn">Read Our Story</a>
+        <a href="quiz.html" class="btn">Take the Co-Pilot Quiz</a>
+        <a href="final-proposal.html" class="btn">Final Question</a>
     </div>
-    <script>
-        function showLoveNote() {
-            document.getElementById('loveNote').style.display = 'block';
-        }
-        function acceptProposal() {
-            alert("Fasten your seatbelt, Captain! Our journey begins!");
-        }
-    </script>
 </body>
 </html>
